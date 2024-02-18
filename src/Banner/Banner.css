@@ -1,0 +1,16 @@
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 20px;
+    margin:10px
+  }
+  
+  .banner img {
+    width: 90%;
+    object-fit: contain;
+    border-radius: 5%; /* Use "contain" for maintaining aspect ratio and fitting within the container */
+  }
+  
