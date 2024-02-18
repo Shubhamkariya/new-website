@@ -3,85 +3,51 @@ import './Mens.css'; // Import your CSS file for styling
 
 const Mens = () => {
     const data = [
-        { id: 1, content: 'Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum.', name: 'John Dean' },
-        { id: 2, content: 'Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum.', name: 'John Dean' },
-        // Add more data objects as needed
+        { id: 1,
+                imgUrl: 'https://unsplash.it/200/200',
+             content: 'Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum.', name: 'John Dean' },
+        { id: 2,
+            imgUrl: 'https://unsplash.it/200/200',
+            content: 'Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum.', name: 'John Dean' },
+       // Add more data objects as needed
+      ];
+      const dataRows = [
+        {   id: 3,
+            imgUrl: 'https://unsplash.it/200/200',
+            content: 'Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum.', name: 'John Dean' },
+        {   id: 4,
+            imgUrl: 'https://unsplash.it/200/200',
+            content: 'Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum.', name: 'John Dean' },
+        {   id: 5, 
+            imgUrl: 'https://unsplash.it/200/200',
+            content: 'Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum. Lorem Ipsum is like Aldus PageMaker including versions of Lorem Ipsum.', name: 'John Dean' },
+       // Add more data objects as needed
       ];
   return (
-    // <div>
-    //     <div class="test">
-    //         <div class="card">
-    //         <div class="container">
-    //         <p>
-    //         Lorem Ipsum ie like Aldus Pa
-    //         geMaker including versions of Lorem Ipsum.
-    //         </p>
-    //             <h4>john dean</h4>
-    //         </div>
-    //         </div>
 
-
-    //     <div class="card">
-    //         <div class="container">
-    //         <p>
-    //         Lorem Ipsum ie like Aldus Pa
-    //         geMaker including versions of Lorem Ipsum.
-    //         Lorem Ipsum ie like Aldus Pa
-    //         geMaker including versions of Lorem Ipsum.
-    //         </p>
-    //             <h4>john dean</h4>
-    //         </div>
-    //         </div>
-    //     </div>
-
-    //     <div className='Second'>
-    //         <div class="cardSecond">
-    //             <div class="container">
-    //             <p>
-    //             Lorem Ipsum ie like Aldus Pa
-    //             geMaker including versions of Lorem Ipsum.
-    //             Lorem Ipsum ie like Aldus Pa
-    //             geMaker including versions of Lorem Ipsum.
-    //             </p>
-    //                 <h4>john dean</h4>
-    //             </div>
-    //     </div>
-    //     <div class="cardSecond">
-    //             <div class="container">
-    //             <p>
-    //             Lorem Ipsum ie like Aldus Pa
-    //             geMaker including versions of Lorem Ipsum.
-    //             Lorem Ipsum ie like Aldus Pa
-    //             geMaker including versions of Lorem Ipsum.
-    //             </p>
-    //                 <h4>john dean</h4>
-    //             </div>
-    //     </div>
-    //     <div class="cardSecond">
-    //             <div class="container">
-    //             <p>
-    //             Lorem Ipsum ie like Aldus Pa
-    //             geMaker including versions of Lorem Ipsum.
-    //             Lorem Ipsum ie like Aldus Pa
-    //             geMaker including versions of Lorem Ipsum.
-    //             </p>
-    //                 <h4>john dean</h4>
-    //             </div>
-    //     </div>
-
-    //    </div>
-    
-    // </div>
     <div>
-    {data.map(item => (
-      <div key={item.id} className="card">
-        <div className="container">
-          <p>{item.content}</p>
-          <h4>{item.name}</h4>
+        <div className="card-container" >
+            {data.map(item => (
+            <div key={item.id} className="card" style={{ backgroundImage: `url(${item.imgUrl})`,backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="container">
+                <p>{item.content}</p>
+                <h4>{item.name}</h4>
+                </div>
+            </div>
+            ))}
         </div>
-      </div>
-    ))}
-  </div>
+        <div className="card-container">
+            {dataRows.map(item => (
+            <div key={item.id} className="card" style={{ backgroundImage: `url(${item.imgUrl})`,backgroundSize: 'cover', backgroundPosition: 'center' }}>
+                <div className="container">
+                    <p>{item.content}</p>
+                    <h4>{item.name}</h4>
+                </div>
+            </div>
+            ))}
+        </div>
+    </div>
+   
         
   );
 };

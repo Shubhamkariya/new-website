@@ -4,6 +4,7 @@
     display: flex;
     margin-top: 50vh;
     align-items: center;
+    color: white;
 
    /* Make sure the body takes the full height of the viewport */
 }
@@ -35,6 +36,12 @@
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   }
   
+  .buttonArrow{
+    font-size: 3rem;
+    background-color: grey;
+    border-radius: 100px;
+  }
+
   /* Add additional styling based on your design preferences */
   
   

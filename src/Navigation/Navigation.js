@@ -1,5 +1,7 @@
 import React from 'react';
 import './Navigation.css'; // Import your CSS file for styling
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch, faShoppingCart } from '@fortawesome/free-solid-svg-icons';
 
 const NavBar = () => {
   return (
@@ -21,6 +23,14 @@ const NavBar = () => {
           <a href="/contact">Contact</a>
         </li>
       </ul>
+      <div className="nav-icons">
+        <div className="icon">
+          <FontAwesomeIcon icon={faSearch} />
+        </div>
+        <div className="icon">
+          <FontAwesomeIcon icon={faShoppingCart} />
+        </div>
+      </div>
     </nav>
   );
 };

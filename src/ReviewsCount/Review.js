@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Review.css'; // Import your CSS file for styling
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee, faFire } from '@fortawesome/free-solid-svg-icons';
+import { faArrowLeft, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -74,11 +74,11 @@ const ReviewContainer = () => {
        <div className="quote-container">
             <blockquote className="quote">{quotes[quoteIndex]}</blockquote>
             <div className="buttons-container">
-                <button onClick={prevQuote}>Previous 
+                <button onClick={prevQuote} className="buttonArrow"> 
                 
-                <FontAwesomeIcon icon="faFire" />                </button>
-                <button onClick={nextQuote}>Next 
-                    <FontAwesomeIcon icon="fa-solid fa fa-arrow-right" /> 
+                <FontAwesomeIcon icon={faArrowLeft} />                </button>
+                <button onClick={nextQuote} className="buttonArrow"> 
+                    <FontAwesomeIcon icon={faArrowRight} /> 
                 </button>
             </div>
         </div>
